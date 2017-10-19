@@ -3,7 +3,7 @@
 This code is a modified version of the excellent work in the [ConsenSys](https://consensys.net/) repository:
  [Tokens](https://github.com/ConsenSys/Tokens)
 
-This repo contains a Solidity smart contract code to issue a simple, standards-compliant token on Ethereum. 
+This repo contains a Solidity smart contract to issue a simple, standards-compliant token on Ethereum. 
 
 Theoretically, It can be modified and extended to suit any purpose. 
 
