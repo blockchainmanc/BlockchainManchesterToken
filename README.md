@@ -5,26 +5,26 @@ This code is a modified version of the excellent work in the [ConsenSys](https:/
 
 This repo contains a Solidity smart contract code to issue a simple, standards-compliant token on Ethereum. 
 
-It can be modified and extended to suit any prupose. 
+Theoretically, It can be modified and extended to suit any purpose. 
 
-The default is [Token.sol]() which defines the the core ERC20 standard functionality [#20](https://github.com/ethereum/EIPs/issues/20).  
+The smart contract is called [BlockchainManchesterToken.sol](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol) which defines the the core ERC20 standard functionality [#20](https://github.com/ethereum/EIPs/issues/20).  
 
-[BlockchainManchesterToken.sol]() is an example of a token to be mainly used by other humans. It includes:  
+[BlockchainManchesterToken](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol) is an example of a token to be mainly used by other humans (to exchange tokens). 
+
+It includes:  
 
 1. Predefined finite supply hardcoded on creation.  
-2. Optional Decimal, Symbol & Name parameters (hardcoded).  
+2. Predefined Decimal, Symbol & Name parameters (hardcoded).  
 
-There is a set of tests written for the [BlockchainManchesterToken.sol]() using the Truffle framework (3.x) to do so.
+There is a set of tests written for the [BlockchainManchesterToken.sol](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol) using the Truffle framework (3.x).
 
 [ERC-20](https://github.com/ethereum/EIPs/issues/20) Standards allows other contract developers and wallets to interact, use, and display this token. 
 
-## Blockchain Manchester 
+## Test chains
 
-### Test chains
+**Ropsten** Contract adddress: [0x39e0a1c614281c6c2438c8864a7b76a072579c6b](https://ropsten.etherscan.io/token/0x39e0a1c614281c6c2438c8864a7b76a072579c6b)
 
-Ropsten: Contract adddress: [0x39e0a1c614281c6c2438c8864a7b76a072579c6b](https://ropsten.etherscan.io/token/0x39e0a1c614281c6c2438c8864a7b76a072579c6b)
-
-### Smart Contract ABI (Interface)
+## Smart Contract ABI (Interface)
 
 ```
 [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]

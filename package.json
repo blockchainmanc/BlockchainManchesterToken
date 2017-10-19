@@ -18,15 +18,13 @@
     "ethereum"
   ],
   "authors": [
-    "Simon de la Rouviere <simon.delarouviere@consensys.net>",
-    "Joseph Chow <joseph.chow@consensys.net>",
     "Andy Gray <andy@whatsthescore.co.uk>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ConsenSys/Tokens/issues"
+    "url": "https://github.com/blockchainmanc/BlockchainManchesterToken/issues"
   },
-  "homepage": "https://github.com/ConsenSys/Tokens#readme",
+  "homepage": "https://github.com/blockchainmanc/BlockchainManchesterToken#readme",
   "dependencies": {
     "truffle-hdwallet-provider": "0.0.3"
   },
