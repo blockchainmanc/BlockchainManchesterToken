@@ -1,0 +1,20 @@
+# System Cruft
+# ================================================
+.DS_Store
+*.swp
+*.swo
+
+
+# Generated stuff
+# ================================================
+build
+node_modules
+.idea
+
+# Secret mnemonic - insert your own to deploy to ropsten etc
+# ================================================
+mnemonic.js
+
+# Other
+# ================================================
+bower_components
