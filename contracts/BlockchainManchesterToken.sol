@@ -44,7 +44,7 @@ contract Token {
 
 contract BlockchainManchesterToken is Token {
 
-    uint256 constant MAX_UINT256 = 2 ** 256 - 1;
+    uint256 constant FINITE_TOKEN_SUPPLY = 1000000;
 
     /*
     NOTE:
@@ -57,13 +57,13 @@ contract BlockchainManchesterToken is Token {
     string public symbol = "BCM";
 
     function BlockchainManchesterToken() {
-        totalSupply = 1000000; // 1 million BCM is the finite total supply
+        totalSupply = FINITE_TOKEN_SUPPLY; // 1 million BCM is the finite total supply
+
         // Give the creator all initial tokens
         balances[msg.sender] = totalSupply;
     }
 
     function transfer(address _to, uint256 _value) returns (bool success) {
-        //Default assumes totalSupply can't be over max (2^256 - 1).
         require(balances[msg.sender] >= _value);
         balances[msg.sender] -= _value;
         balances[_to] += _value;
@@ -76,9 +76,7 @@ contract BlockchainManchesterToken is Token {
         require(balances[_from] >= _value && allowance >= _value);
         balances[_to] += _value;
         balances[_from] -= _value;
-        if (allowance < MAX_UINT256) {
-            allowed[_from][msg.sender] -= _value;
-        }
+        allowed[_from][msg.sender] -= _value;
         Transfer(_from, _to, _value);
         return true;
     }
