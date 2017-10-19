@@ -154,7 +154,7 @@ contract('BlockchainManchesterToken', function (accounts) {
       BcmToken.approve(accounts[1], 0, {from: accounts[0]});
       await expectThrow(BcmToken.transferFrom.call(accounts[0], accounts[2], 10, {from: accounts[1]}))
     });
-    
+
     it('events: should fire Transfer event properly', async () => {
       const res = await BcmToken.transfer(accounts[1], '2666', {from: accounts[0]});
       const transferLog = res.logs.find(element => element.event.match('Transfer'));
