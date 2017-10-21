@@ -3,7 +3,7 @@
 This code is a modified version of the excellent work in the [ConsenSys](https://consensys.net/) repository:
  [Tokens](https://github.com/ConsenSys/Tokens)
 
-This repo contains a Solidity smart contract to issue a simple, standards-compliant token on Ethereum. 
+This repo contains a Solidity smart contract to issue a simple, standards-compliant [ERC20](https://blockgeeks.com/guides/ethereum-token/) token on Ethereum. 
 
 Theoretically, It can be modified and extended to suit any purpose. 
 
@@ -13,8 +13,8 @@ The smart contract is called [BlockchainManchesterToken.sol](https://github.com/
 
 It includes:  
 
-1. Predefined finite supply hardcoded on creation.  
-2. Predefined Decimal, Symbol & Name parameters (hardcoded).  
+1. Predefined [finite](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol#L47) supply hardcoded on creation.  
+2. Predefined [Decimal](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol#L56), [Symbol](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol#L57) & [Name](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol#L55) parameters (hardcoded).  
 
 There is a set of tests written for the [BlockchainManchesterToken.sol](https://github.com/blockchainmanc/BlockchainManchesterToken/blob/master/contracts/BlockchainManchesterToken.sol) using the Truffle framework (3.x).
 
@@ -33,6 +33,9 @@ There is a set of tests written for the [BlockchainManchesterToken.sol](https://
 ## Install
 
 Uses Truffle 3.x. (globally)
+```
+npm install truffle -g
+```
 
 Requires Node > 0.7.x (and npm) (globally)
 
@@ -40,19 +43,30 @@ Requires Node > 0.7.x (and npm) (globally)
 npm install
 ```
 
-## Testing
-
+Create a `mnemonic` file at the root of the project
 ```
-truffle test
+touch mnemonic.js
 ```
 
 ## Deployment (via Truffle)
 
 To work locally  you will need a running instance of [testrpc](https://github.com/ethereumjs/testrpc).
 
+To install `testrpc`
+```
+npm install -g ethereumjs-testrpc
+```
+* Once running lauch `testrpc` in a new shell
+
 Deploying locally (to network: default):
 ```
 truffle migrate
+```
+
+## Testing
+
+```
+truffle test
 ```
 
 To deploy to the Ropsten test chain, you will need to add javascript file called `mnemonic.js` in the root of the project with your mnemonic seed (that has credit in the coinbase account).
