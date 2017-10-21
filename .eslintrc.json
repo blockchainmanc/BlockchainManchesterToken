@@ -136,7 +136,6 @@
     "object-curly-spacing": [ 2, "always" ],
     "operator-linebreak": [ 2, "none" ],
     "quote-props": [ 2, "always" ],
-    "quotes": [ 2, "double", "avoid-escape" ],
     "semi": [ 2, "always" ],
     "space-after-keywords": [ 2, "always" ],
     "space-before-blocks": [ 2, "always" ],
