@@ -20,9 +20,11 @@ There is a set of tests written for the [BlockchainManchesterToken.sol](https://
 
 [ERC-20](https://github.com/ethereum/EIPs/issues/20) Standards allows other contract developers and wallets to interact, use, and display this token. 
 
-## Test chains
+## Deployed instances
 
 **Ropsten** Contract adddress: [0x39e0a1c614281c6c2438c8864a7b76a072579c6b](https://ropsten.etherscan.io/token/0x39e0a1c614281c6c2438c8864a7b76a072579c6b)
+
+**Main Ethereum Blockchain** Contract address [0xde8493067d5c68ea7c2e6dc347ad2ae68ece09e3](https://etherscan.io/token/0xde8493067d5c68ea7c2e6dc347ad2ae68ece09e3)
 
 ## Smart Contract ABI (Interface)
 
