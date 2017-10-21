@@ -73,6 +73,13 @@ truffle test
 
 To deploy to the Ropsten test chain, you will need to add javascript file called `mnemonic.js` in the root of the project with your mnemonic seed (that has credit in the coinbase account).
 
+* Creating a test coinbase account on the test network Ropsten
+  * Create a MetaMask account OR Ehterum Wallet account ensuring you are on the Ropsten test network
+  * Source it with test Ether so we have some [Gas](https://www.cryptocompare.com/coins/guides/what-is-the-gas-in-ethereum/)
+    * MetaMask test Ether https://faucet.metamask.io/
+    * Ethereum Wallet test Ether http://faucet.ropsten.be:3001/
+  * Update the `mnemonic.js` with your test network seed that now should have some test Gas
+
 The `mnemonic.js` should be like so (but with your mnemonic seed):
 ```
 module.exports = "bottle alley hunt acid hello limb matter robust tiger salad educate coffee";
@@ -81,6 +88,27 @@ module.exports = "bottle alley hunt acid hello limb matter robust tiger salad ed
 Deploying remotely (to Ropsten, for example):
 ```
 truffle migrate --network ropsten
+```
+
+Once deployed it will look something like this:
+```bash
+truffle migrate --network ropsten
+Using network 'ropsten'.
+
+Running migration: 1_initial_migration.js
+  Deploying Migrations...
+  ... 0x000000000000000000000000000000000000000000000000000000000000000
+  Migrations: 0x0000000000000000000000000000000000000
+Saving successful migration to network...
+  ... 0x000000000000000000000000000000000000000000000000000000000000000
+Saving artifacts...
+Running migration: 2_deploy_tokens.js
+  Deploying BlockchainManchesterToken...
+  ... 0x000000000000000000000000000000000000000000000000000000000000000
+  BlockchainManchesterToken: 0x0000000000000000000000000000000000000000
+Saving successful migration to network...
+  ... 0x000000000000000000000000000000000000000000000000000000000000000
+Saving artifacts...
 ```
 
 ### Licensed under MIT.  
