@@ -73,24 +73,27 @@ truffle test
 
 To deploy to the Ropsten test chain, you will need to add javascript file called `mnemonic.js` in the root of the project with your mnemonic seed (that has credit in the coinbase account).
 
-* Creating a test coinbase account on the test network Ropsten
-  * Create a MetaMask account OR Ehterum Wallet account ensuring you are on the Ropsten test network
-  * Source it with test Ether so we have some [Gas](https://www.cryptocompare.com/coins/guides/what-is-the-gas-in-ethereum/)
-    * MetaMask test Ether https://faucet.metamask.io/
-    * Ethereum Wallet test Ether http://faucet.ropsten.be:3001/
-  * Update the `mnemonic.js` with your test network seed that now should have some test Gas
-
 The `mnemonic.js` should be like so (but with your mnemonic seed):
 ```
 module.exports = "bottle alley hunt acid hello limb matter robust tiger salad educate coffee";
 ```
 
-Deploying remotely (to Ropsten, for example):
+### Ensuring you have credit on Ropsten
+
+* Creating a test coinbase account on the test network Ropsten
+  * Create a MetaMask account or Ethereum Wallet account ensuring you are on the Ropsten test network
+  * Source it with test Ether so we can use it as [Gas](https://www.cryptocompare.com/coins/guides/what-is-the-gas-in-ethereum/) to pay for Smart Contract deployment
+    * MetaMask test Ether [https://faucet.metamask.io/](https://faucet.metamask.io/)
+    * Ethereum Wallet test Ether [http://faucet.ropsten.be:3001/](http://faucet.ropsten.be:3001/)
+  * Remember to update the `mnemonic.js` with your test network seed that now should have some test Ether
+
+
+Deploying remotely to Ropsten:
 ```
 truffle migrate --network ropsten
 ```
 
-Once deployed it will look something like this:
+Once deployed the output will look something like this:
 ```bash
 truffle migrate --network ropsten
 Using network 'ropsten'.
