@@ -58,7 +58,7 @@ To install `testrpc`
 ```
 npm install -g ethereumjs-testrpc
 ```
-* Once running lauch `testrpc` in a new shell
+* launch `testrpc` in a new shell. This is your local blockchain.
 
 Deploying locally (to network: default):
 ```
