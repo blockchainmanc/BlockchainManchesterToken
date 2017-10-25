@@ -24,7 +24,10 @@ There is a set of tests written for the [BlockchainManchesterToken.sol](https://
 
 **Ropsten** Contract adddress: [0x39e0a1c614281c6c2438c8864a7b76a072579c6b](https://ropsten.etherscan.io/token/0x39e0a1c614281c6c2438c8864a7b76a072579c6b)
 
-**Main Ethereum Blockchain** Contract address [0xde8493067d5c68ea7c2e6dc347ad2ae68ece09e3](https://etherscan.io/token/0xde8493067d5c68ea7c2e6dc347ad2ae68ece09e3)
+**Main Ethereum Blockchain** 
+
+Blockchain Manchester Token address [0xde8493067d5c68ea7c2e6dc347ad2ae68ece09e3](https://etherscan.io/token/0xde8493067d5c68ea7c2e6dc347ad2ae68ece09e3)
+Blockchain Manchester Pioneer Token address (given to attendees of our first meet up) [0xf363dc63fde10df67a305faddd0116060d7de3f3](https://etherscan.io/address/0xf363dc63fde10df67a305faddd0116060d7de3f3)
 
 ## Smart Contract ABI (Interface)
 

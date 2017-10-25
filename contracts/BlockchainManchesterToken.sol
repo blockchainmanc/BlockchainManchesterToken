@@ -1,7 +1,7 @@
-// Abstract contract for the full ERC 20 Token standard
 // https://github.com/ethereum/EIPs/issues/20
 pragma solidity ^0.4.11;
 
+// Abstract contract for the full ERC 20 Token standard
 contract Token {
     /* This is a slight change to the ERC20 base standard.
     function totalSupply() constant returns (uint256 supply);
@@ -42,6 +42,7 @@ contract Token {
     event Approval(address indexed _owner, address indexed _spender, uint256 _value);
 }
 
+// example implementation of an ERC20 token
 contract BlockchainManchesterToken is Token {
 
     uint256 constant FINITE_TOKEN_SUPPLY = 1000000;
@@ -54,7 +55,7 @@ contract BlockchainManchesterToken is Token {
     */
     string public name  = "Blockchain Manchester Token";
     uint8 public decimals = 0;
-    string public symbol = "BCM";
+    string public symbol = "MANC";
 
     function BlockchainManchesterToken() {
         totalSupply = FINITE_TOKEN_SUPPLY; // 1 million BCM is the finite total supply
